@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Phusion <info@phusion.nl>
+MAINTAINER Christoph Lukas <christoph.lukas@gmx.net>
 
 ADD . /bd_build
 

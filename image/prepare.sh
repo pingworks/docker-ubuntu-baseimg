@@ -56,3 +56,11 @@ dpkg -i chef_12.*_amd64.deb
 rm chef_12.*_amd64.deb
 cd
 
+## Install ssh key
+mkdir -p /root/.ssh
+cat << EOF > /root/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfAMwt9UREWVvdvhF/HV1aI4BKladErVIPogFUiznCbHskIDETozP/xi9eEgZZT4Ziv9Kme34MRNBLrVlsdG+pfqYyHgV7ibCEUD69twxSGxtqQYJOpVSMNLGA4sWicrkGGRWOIx4+BHsAb0J/cV3GBZ5Wq8/S++ALlQsSWWdNPpKZ9eUESM0UFpZCf5InBUxzc4vkP4Rl7R81fh1h/iF6EUSEh2LwJ0f3MEEikbw2sxkaEICx3u6upjYj2c3JLpTgoS2FXRsZFiixG68c3HSs9hTKlX2X+73Vb+0Vf0XesQGWogmyyJwTx4uvaDKsG8itrFNaoRz6Gi7QG6s+pBBf cluk@hoss
+EOF
+chmod 700 /root/.ssh
+chmod 600 /root/.ssh/authorized_keys
+
