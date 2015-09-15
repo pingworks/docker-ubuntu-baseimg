@@ -47,3 +47,12 @@ locale-gen en_US
 update-locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 echo -n en_US.UTF-8 > /etc/container_environment/LANG
 echo -n en_US.UTF-8 > /etc/container_environment/LC_CTYPE
+
+## Install Chef
+$minimal_apt_get_install wget
+cd /tmp
+wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/10.04/x86_64/chef_12.4.1-1_amd64.deb
+dpkg -i chef_12.*_amd64.deb
+rm chef_12.*_amd64.deb
+cd
+
